@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Multiplication Practice - MentalMathPal</title>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Settings and Generation Panel -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-2xl font-semibold mb-4">Multiplication Practice</h2>
+            <label class="block text-gray-700 mb-2">Number of Questions:</label>
+            <input id="numQuestions" type="number" class="w-full border rounded px-3 py-2 mb-4">
+            <label class="block text-gray-700 mb-2">Number Range:</label>
+            <div class="flex">
+                <input id="minNumber" type="number" class="w-1/2 border rounded-l px-3 py-2 mb-2 mr-2" placeholder="Min">
+                <input id="maxNumber" type="number" class="w-1/2 border rounded-r px-3 py-2 mb-2 ml-2" placeholder="Max">
+            </div>
+            <button id="generateButton" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Generate</button>
+        </div>
+
+        <!-- Interactive Boxes and Answer Display -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-lg font-semibold mb-4">Complete the Boxes</h3>
+            <div id="operationBoxes" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-4">
+                <!-- Dynamically generated operation boxes will be placed here -->
+            </div>
+            <button id="validateButton" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Validate</button>
+            <button id="clearButton" class="bg-gray-300 hover:bg-gray-400 text-gray-700 px-4 py-2 rounded ml-2">Clear</button>
+            <button id="viewAnswersButton" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded ml-2">View Answers</button>
+            <div id="answerDisplay" class="mt-4">
+                <!-- Answer feedback will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/multiplication.js"></script>
+</body>
+</html>
