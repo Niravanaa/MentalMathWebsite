@@ -41,7 +41,7 @@ MentalMathPal is a web-based platform designed to help learners of all levels im
 
 ## Contributing
 
-We welcome contributions from the community! If you have any improvements, bug fixes, or new features to propose, please follow these steps:
+Community contributions are welcome. If you have any improvements, bug fixes, or new features to propose, please follow these steps:
 
 1. Fork the repository.
 2. Create a new branch for your feature (`git checkout -b feature/my-feature`).
@@ -51,7 +51,7 @@ We welcome contributions from the community! If you have any improvements, bug f
 
 ## Contact
 
-Feel free to contact us for any inquiries or feedback:
+Feel free to contact me for any inquiries or feedback:
 
 - Email: [niravp0703@gmail.com](mailto:niravp0703@gmail.com)
 - LinkedIn: [Nirav Patel](https://www.linkedin.com/in/niravp0703)
