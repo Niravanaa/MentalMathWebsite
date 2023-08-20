@@ -30,10 +30,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const operationBox = document.createElement("div");
             operationBox.classList.add("border", "p-4", "text-center");
-            operationBox.textContent = `${num1} + ${num2} = `;
+            operationBox.style.display = "block"; // Set display to block for vertical layout
+            operationBox.innerHTML = `<p>${num1}</p><p>+</p><p>${num2}</p><p>=</p>`;
             const answerInput = document.createElement("input");
             answerInput.type = "number";
             answerInput.classList.add("border", "px-2", "py-1");
+            answerInput.style.display = "block"; // Set display to block for vertical layout
             operationBox.appendChild(answerInput);
 
             operations.push({ num1, num2, result, answerInput });
@@ -80,5 +82,15 @@ document.addEventListener("DOMContentLoaded", function () {
             answerText.textContent = `${operation.num1} + ${operation.num2} = ${operation.result}`;
             answerDisplay.appendChild(answerText);
         });
+    });
+
+    // Validate input to ensure proper integers
+    operationBoxes.addEventListener("input", function (event) {
+        const input = event.target;
+        if (!isNaN(input.value)) {
+            input.classList.remove("border-red-500");
+        } else {
+            input.classList.add("border-red-500");
+        }
     });
 });

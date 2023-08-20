@@ -6,7 +6,19 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Division Practice - MentalMathPal</title>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 mx-auto px-4 md:px-4 py-2">
+    <!-- MentalMathPal Navbar -->
+    <nav class="bg-blue-500 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white text-xl font-bold">MentalMathPal</a>
+            <ul class="flex space-x-4">
+                <li><a href="../index.html" class="text-white hover:underline">Home</a></li>
+                <li><a href="../quizzes.html" class="text-white hover:underline">Quizzes</a></li>
+                <li><a href="../about.html" class="text-white hover:underline">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container mx-auto px-4 py-8">
         <!-- Settings and Generation Panel -->
         <div class="bg-white rounded-lg shadow-md p-6 mb-6">
@@ -35,6 +47,11 @@
             </div>
         </div>
     </div>
+
+    <!-- MentalMathPal Footer -->
+        <footer class="bg-blue-500 text-white text-center py-4">
+        <p>&copy; 2023 MentalMathPal. All rights reserved.</p>
+    </footer>
 
     <script src="../js/division.js"></script>
 </body>
