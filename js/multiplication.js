@@ -28,9 +28,14 @@ document.addEventListener("DOMContentLoaded", function () {
             const operationBox = document.createElement("div");
             operationBox.classList.add("border", "p-4", "text-center");
             operationBox.textContent = `${num1} × ${num2} = `;
+
             const answerInput = document.createElement("input");
             answerInput.type = "number";
             answerInput.classList.add("border", "px-2", "py-1");
+
+            // Adjust input box width for mobile devices
+            answerInput.classList.add("w-full"); // Set input box width to full width on small screens
+
             operationBox.appendChild(answerInput);
 
             operations.push({ num1, num2, result, answerInput });

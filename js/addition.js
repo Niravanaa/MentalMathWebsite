@@ -29,17 +29,22 @@ document.addEventListener("DOMContentLoaded", function () {
             const result = num1 + num2;
 
             const operationBox = document.createElement("div");
-            operationBox.classList.add("border", "p-4", "text-center");
-            operationBox.style.display = "block"; // Set display to block for vertical layout
-            operationBox.innerHTML = `<p>${num1}</p><p>+</p><p>${num2}</p><p>=</p>`;
-            const answerInput = document.createElement("input");
-            answerInput.type = "number";
-            answerInput.classList.add("border", "px-2", "py-1");
-            answerInput.style.display = "block"; // Set display to block for vertical layout
-            operationBox.appendChild(answerInput);
+			operationBox.classList.add("border", "p-4", "text-center");
+			operationBox.style.display = "block"; // Set display to block for vertical layout
+			operationBox.innerHTML = `<p>${num1}</p><p>+</p><p>${num2}</p><p>=</p>`;
 
-            operations.push({ num1, num2, result, answerInput });
-            operationBoxes.appendChild(operationBox);
+			const answerInput = document.createElement("input");
+			answerInput.type = "number";
+			answerInput.classList.add("border", "px-2", "py-1");
+
+			// Adjust input box width for mobile devices
+			answerInput.classList.add("w-full"); // Set input box width to full width on small screens
+
+			answerInput.style.display = "block"; // Set display to block for vertical layout
+			operationBox.appendChild(answerInput);
+
+			operations.push({ num1, num2, result, answerInput });
+			operationBoxes.appendChild(operationBox);
         }
     });
 
