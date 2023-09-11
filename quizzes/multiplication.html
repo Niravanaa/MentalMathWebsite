@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <title>Division Practice - MentalMathPal</title>
+    <title>Multiplication Quiz - MentalMathPal</title>
 </head>
 <body class="bg-gray-100 mx-auto px-4 md:px-4 py-2">
     <!-- MentalMathPal Navbar -->
@@ -13,7 +13,7 @@
             <a href="../index.html" class="text-white text-xl font-bold">MentalMathPal</a>
             <ul class="flex space-x-4">
                 <li><a href="../index.html" class="text-white hover:underline">Home</a></li>
-                <li><a href="../quizzes/quizHome.html" class="text-white hover:underline">Quizzes</a></li>
+                <li><a href="../quizzes.html" class="text-white hover:underline">Quizzes</a></li>
                 <li><a href="../about.html" class="text-white hover:underline">About</a></li>
             </ul>
         </div>
@@ -22,7 +22,7 @@
     <div class="container mx-auto px-4 py-8">
         <!-- Settings and Generation Panel -->
         <div class="bg-white rounded-lg shadow-md p-6 mb-6">
-            <h2 class="text-2xl font-semibold mb-4">Division Practice</h2>
+            <h2 class="text-2xl font-semibold mb-4">Multiplication Quiz Settings</h2>
             <label class="block text-gray-700 mb-2">Number of Questions:</label>
             <input id="numQuestions" type="number" class="w-full border rounded px-3 py-2 mb-4">
             <label class="block text-gray-700 mb-2">Number Range:</label>
@@ -30,6 +30,8 @@
                 <input id="minNumber" type="number" class="w-1/2 border rounded-l px-3 py-2 mb-2 mr-2" placeholder="Min">
                 <input id="maxNumber" type="number" class="w-1/2 border rounded-r px-3 py-2 mb-2 ml-2" placeholder="Max">
             </div>
+			<label class="block text-gray-700 mb-2">Time Limit (in seconds):</label>
+            <input id="timeLimit" type="number" class="w-full border rounded px-3 py-2 mb-4">
             <button id="generateButton" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Generate</button>
         </div>
 
@@ -45,14 +47,19 @@
             <div id="answerDisplay" class="mt-4">
                 <!-- Answer feedback will be displayed here -->
             </div>
+			<!-- Timer display -->
+			<div id="timer" class="text-2xl text-red-500 mt-4">
+				<!-- Timer display will be here -->
+			</div>
+
         </div>
     </div>
 
     <!-- MentalMathPal Footer -->
-        <footer class="bg-blue-500 text-white text-center py-4">
+    <footer class="bg-blue-500 text-white text-center py-4">
         <p>&copy; 2023 MentalMathPal. All rights reserved.</p>
     </footer>
-
-    <script src="js/division.js"></script>
+    
+    <script src="js/multiplication.js"></script>
 </body>
 </html>
